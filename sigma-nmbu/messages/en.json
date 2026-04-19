@@ -1,0 +1,166 @@
+{
+  "nav": {
+    "home": "Home",
+    "events": "Events",
+    "about": "About",
+    "companies": "For Companies",
+    "search": "Search",
+    "locale": "NB"
+  },
+  "footer": {
+    "brand": "SIGMA_NMBU",
+    "version": "BUILD_VER: 1.0.0-STABLE",
+    "rights": "© {year} Sigma NMBU. All rights reserved.",
+    "slack": "Slack",
+    "instagram": "Instagram",
+    "source": "Source Code",
+    "status": "SYSTEM_STATUS: ONLINE"
+  },
+  "home": {
+    "status": "// STATUS: ONLINE_AND_READY",
+    "hero": {
+      "title": "Welcome to Sigma //",
+      "titleAccent": "Data_Science_Branch",
+      "body": "We are Sigma — the student association for Data Science at NMBU. We bridge theory and practice through workshops, hackathons, and professional events.",
+      "cta": {
+        "primary": "Start Training",
+        "secondary": "View Documentation"
+      }
+    },
+    "stream": {
+      "heading": "System_Output: Live Stream",
+      "streaming": "Streaming"
+    },
+    "portal": {
+      "heading": "Member Portal",
+      "subtitle": "// AUTHENTICATION_REQUIRED",
+      "studentId": "Student_ID",
+      "accessKey": "Access_Key",
+      "cta": "INITIALIZE_SESSION()",
+      "requestAccess": "Request_Access",
+      "placeholder": {
+        "id": "student@nmbu.no",
+        "key": "••••••••"
+      },
+      "metrics": {
+        "security": "SECURITY: AES-256",
+        "latency": "LATENCY: 12ms"
+      },
+      "decorativeNotice": "// PORTAL IS NOT YET AVAILABLE"
+    }
+  },
+  "events": {
+    "heading": "Event_Log",
+    "subtitle": "// QUERY_EXECUTED: SELECT * FROM Events",
+    "stats": {
+      "activeNodes": "Active_Nodes",
+      "uptime": "Uptime"
+    },
+    "filters": {
+      "type": "type",
+      "complexity": "complexity",
+      "execute": "EXECUTE_FILTER()"
+    },
+    "list": {
+      "emptyState": "// NO_RESULTS: Query returned 0 rows"
+    },
+    "item": {
+      "registerCta": "REGISTER_NODE",
+      "location": "LOCATION",
+      "capacity": "CAPACITY",
+      "complexity": {
+        "o1": "O(1)",
+        "on": "O(n)",
+        "on2": "O(n²)"
+      }
+    },
+    "detail": {
+      "back": "← cd ..",
+      "register": "REGISTER_NODE()"
+    }
+  },
+  "about": {
+    "hero": {
+      "import": "import sigma",
+      "init": "sigma.init()"
+    },
+    "dict": {
+      "entity": "Sigma — The Data Science Association",
+      "focus": "Data Science, AI, Machine Learning",
+      "objective": "Bridging academia and industry",
+      "values": "['innovation', 'collaboration', 'curiosity', 'inclusion']",
+      "nodes": "active_nodes"
+    },
+    "log": {
+      "heading": "Training_Log",
+      "epoch": "EPOCH",
+      "current": "CURRENT"
+    },
+    "board": {
+      "heading": "The Board",
+      "query": "// SELECT * FROM board WHERE status = 'ACTIVE'",
+      "stats": {
+        "uptime": "UPTIME"
+      },
+      "class": {
+        "root": "ROOT",
+        "daemon": "DAEMON",
+        "allocator": "ALLOCATOR",
+        "compiler": "COMPILER",
+        "scheduler": "SCHEDULER"
+      },
+      "roles": {
+        "leder": "President",
+        "nestleder": "Vice President",
+        "okonomi": "Treasurer",
+        "markeds": "Marketing Lead",
+        "bedrift": "Corporate Relations",
+        "arrangement": "Events Lead"
+      }
+    }
+  },
+  "companies": {
+    "hero": {
+      "endpoint": "// ENDPOINT: /api/partnership",
+      "title": "B2B_Integration",
+      "subtitle": "Connect your company with Norway's top Data Science students at NMBU."
+    },
+    "metrics": {
+      "members": "Active_Nodes",
+      "events": "Events/Year",
+      "partners": "Corporate_Partners"
+    },
+    "endpoints": {
+      "sponsorship": {
+        "title": "Sponsorship",
+        "body": "Gain visibility among Data Science students year-round with tailored sponsorship packages.",
+        "cta": "Request_Endpoint"
+      },
+      "presentation": {
+        "title": "Company Presentation",
+        "body": "Present your company and technology directly to engaged students in an informal setting.",
+        "cta": "Request_Endpoint"
+      },
+      "workshop": {
+        "title": "Workshop",
+        "body": "Host a hands-on workshop where students solve real problems with your technology.",
+        "cta": "Request_Endpoint"
+      }
+    },
+    "form": {
+      "company": "Company Name",
+      "contact": "Contact Person",
+      "email": "Email",
+      "category": "Category",
+      "message": "Message",
+      "submit": "SEND_REQUEST()",
+      "success": "// REQUEST_SENT: We'll be in touch soon.",
+      "error": "// ERROR: Something went wrong. Please try again."
+    }
+  },
+  "common": {
+    "loading": "Loading...",
+    "error": "Error",
+    "backToHome": "← cd ~"
+  }
+}

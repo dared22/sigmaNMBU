@@ -1,0 +1,116 @@
+@import "tailwindcss";
+@plugin "@tailwindcss/typography";
+
+@theme inline {
+  /* ── Colors: Design.md palette ── */
+  --color-bg: #33313B;
+  --color-bg-deep: #2A2833;
+  --color-bg-raised: #3D3A46;
+
+  --color-accent-primary: #4592AF;
+  --color-accent-primary-dim: #356E86;
+  --color-accent-secondary: #E3C4A8;
+  --color-accent-secondary-dim: #B89A82;
+
+  --color-neutral: #F6F5F5;
+  --color-neutral-muted: #C9C4D1;
+  --color-neutral-dim: #9A95A3;
+
+  --color-line: rgb(255 255 255 / 0.10);
+  --color-line-strong: rgb(255 255 255 / 0.20);
+
+  --color-status-ok: #4592AF;
+  --color-status-warn: #E3C4A8;
+  --color-status-err: #FFB4AB;
+
+  /* ── Typography ── */
+  --font-headline: var(--font-grotesk), sans-serif;
+  --font-mono: var(--font-mono-var), ui-monospace, monospace;
+
+  /* ── Letter spacing ── */
+  --tracking-headline: -0.05em;
+
+  /* ── Border radius ── */
+  --radius: 2px;
+  --radius-lg: 4px;
+  --radius-xl: 8px;
+  --radius-full: 12px;
+
+  /* ── Shadows ── */
+  --shadow-glow: 0 0 40px 0 rgb(69 146 175 / 0.08);
+  --shadow-glow-md: 0 0 18px rgb(69 146 175 / 0.35);
+  --shadow-glow-lg: 0 0 32px rgb(69 146 175 / 0.55);
+  --shadow-glow-warm: 0 0 24px rgb(227 196 168 / 0.30);
+
+  /* ── Background ── */
+  --background-image-dot-grid: radial-gradient(circle, rgb(255 255 255 / 0.08) 1px, transparent 1px);
+  --background-size-grid: 24px 24px;
+
+  /* ── Animations ── */
+  --animate-pulse-dot: pulse-dot 2s ease-in-out infinite;
+  --animate-caret: caret 1s step-end infinite;
+  --animate-glitch: glitch 140ms steps(2, end);
+  --animate-stream-in: stream-in 420ms cubic-bezier(0.2, 0.7, 0.2, 1) both;
+
+  @keyframes pulse-dot {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.35; }
+  }
+  @keyframes caret {
+    50% { opacity: 0; }
+  }
+  @keyframes glitch {
+    50% {
+      transform: translate(-1px, 1px) skewX(-2deg);
+      filter: hue-rotate(8deg);
+    }
+  }
+  @keyframes stream-in {
+    0% { opacity: 0; transform: translateY(8px); }
+    100% { opacity: 1; transform: translateY(0); }
+  }
+}
+
+/* ── Base ── */
+@layer base {
+  html, body {
+    background: var(--color-bg);
+    color: var(--color-neutral);
+  }
+  ::selection {
+    background: var(--color-accent-primary);
+    color: var(--color-bg);
+  }
+  :focus-visible {
+    outline: 2px solid var(--color-accent-primary);
+    outline-offset: 2px;
+  }
+}
+
+/* ── Utilities ── */
+@utility grid-bg {
+  background-image: var(--background-image-dot-grid);
+  background-size: var(--background-size-grid);
+}
+
+@utility glass {
+  background-color: rgb(255 255 255 / 0.04);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+
+@utility ghost-border {
+  border: 1px solid var(--color-line);
+}
+
+@utility hairline {
+  border: 1px solid var(--color-line-strong);
+}
+
+/* ── Reduced motion ── */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation: none !important;
+    transition: none !important;
+  }
+}

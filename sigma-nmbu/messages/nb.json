@@ -1,0 +1,166 @@
+{
+  "nav": {
+    "home": "Hjem",
+    "events": "Arrangementer",
+    "about": "Om oss",
+    "companies": "For bedrifter",
+    "search": "Søk",
+    "locale": "EN"
+  },
+  "footer": {
+    "brand": "SIGMA_NMBU",
+    "version": "BUILD_VER: 1.0.0-STABLE",
+    "rights": "© {year} Sigma NMBU. Alle rettigheter reservert.",
+    "slack": "Slack",
+    "instagram": "Instagram",
+    "source": "Kildekode",
+    "status": "SYSTEM_STATUS: ONLINE"
+  },
+  "home": {
+    "status": "// STATUS: ONLINE_AND_READY",
+    "hero": {
+      "title": "Velkommen til Sigma //",
+      "titleAccent": "Data_Science_Branch",
+      "body": "Vi er Sigma — linjeforeningen for datavitenskap ved NMBU. Vi bygger broer mellom teori og praksis gjennom workshops, hackathons og faglige arrangementer.",
+      "cta": {
+        "primary": "Start Training",
+        "secondary": "View Documentation"
+      }
+    },
+    "stream": {
+      "heading": "System_Output: Live Stream",
+      "streaming": "Streaming"
+    },
+    "portal": {
+      "heading": "Medlemsportal",
+      "subtitle": "// AUTHENTICATION_REQUIRED",
+      "studentId": "Student_ID",
+      "accessKey": "Access_Key",
+      "cta": "INITIALIZE_SESSION()",
+      "requestAccess": "Request_Access",
+      "placeholder": {
+        "id": "student@nmbu.no",
+        "key": "••••••••"
+      },
+      "metrics": {
+        "security": "SECURITY: AES-256",
+        "latency": "LATENCY: 12ms"
+      },
+      "decorativeNotice": "// PORTALEN ER IKKE TILGJENGELIG ENNÅ"
+    }
+  },
+  "events": {
+    "heading": "Event_Log",
+    "subtitle": "// QUERY_EXECUTED: SELECT * FROM Events",
+    "stats": {
+      "activeNodes": "Active_Nodes",
+      "uptime": "Uptime"
+    },
+    "filters": {
+      "type": "type",
+      "complexity": "complexity",
+      "execute": "EXECUTE_FILTER()"
+    },
+    "list": {
+      "emptyState": "// NO_RESULTS: Query returned 0 rows"
+    },
+    "item": {
+      "registerCta": "REGISTER_NODE",
+      "location": "LOCATION",
+      "capacity": "CAPACITY",
+      "complexity": {
+        "o1": "O(1)",
+        "on": "O(n)",
+        "on2": "O(n²)"
+      }
+    },
+    "detail": {
+      "back": "← cd ..",
+      "register": "REGISTER_NODE()"
+    }
+  },
+  "about": {
+    "hero": {
+      "import": "import sigma",
+      "init": "sigma.init()"
+    },
+    "dict": {
+      "entity": "Sigma — Linjeforeningen for Datavitenskap",
+      "focus": "Data Science, AI, Machine Learning",
+      "objective": "Bygge broer mellom akademia og industri",
+      "values": "['innovasjon', 'samarbeid', 'nysgjerrighet', 'inkludering']",
+      "nodes": "active_nodes"
+    },
+    "log": {
+      "heading": "Training_Log",
+      "epoch": "EPOCH",
+      "current": "CURRENT"
+    },
+    "board": {
+      "heading": "Hovedstyret",
+      "query": "// SELECT * FROM board WHERE status = 'ACTIVE'",
+      "stats": {
+        "uptime": "UPTIME"
+      },
+      "class": {
+        "root": "ROOT",
+        "daemon": "DAEMON",
+        "allocator": "ALLOCATOR",
+        "compiler": "COMPILER",
+        "scheduler": "SCHEDULER"
+      },
+      "roles": {
+        "leder": "Leder",
+        "nestleder": "Nestleder",
+        "okonomi": "Økonomiansvarlig",
+        "markeds": "Markedsansvarlig",
+        "bedrift": "Bedriftsansvarlig",
+        "arrangement": "Arrangementsansvarlig"
+      }
+    }
+  },
+  "companies": {
+    "hero": {
+      "endpoint": "// ENDPOINT: /api/partnership",
+      "title": "B2B_Integration",
+      "subtitle": "Koble din bedrift til Norges fremste datavitenskapsstudenter ved NMBU."
+    },
+    "metrics": {
+      "members": "Active_Nodes",
+      "events": "Events/Year",
+      "partners": "Corporate_Partners"
+    },
+    "endpoints": {
+      "sponsorship": {
+        "title": "Sponsorship",
+        "body": "Bli synlig for datavitenskapsstudenter gjennom hele året med tilpassede sponsorpakker.",
+        "cta": "Request_Endpoint"
+      },
+      "presentation": {
+        "title": "Bedriftspresentasjon",
+        "body": "Presenter din bedrift og teknologi direkte til engasjerte studenter i et uformelt format.",
+        "cta": "Request_Endpoint"
+      },
+      "workshop": {
+        "title": "Workshop",
+        "body": "Arranger en praktisk workshop hvor studenter løser reelle problemer med din teknologi.",
+        "cta": "Request_Endpoint"
+      }
+    },
+    "form": {
+      "company": "Bedriftsnavn",
+      "contact": "Kontaktperson",
+      "email": "E-post",
+      "category": "Kategori",
+      "message": "Melding",
+      "submit": "SEND_REQUEST()",
+      "success": "// REQUEST_SENT: Vi tar kontakt snart.",
+      "error": "// ERROR: Noe gikk galt. Prøv igjen."
+    }
+  },
+  "common": {
+    "loading": "Loading...",
+    "error": "Error",
+    "backToHome": "← cd ~"
+  }
+}
