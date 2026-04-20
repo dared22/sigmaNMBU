@@ -7,17 +7,17 @@ interface PanelProps {
 }
 
 const stripeColors: Record<string, string> = {
-  primary: 'border-l-accent-primary',
-  secondary: 'border-l-accent-secondary',
-  warn: 'border-l-status-warn',
-  err: 'border-l-status-err',
+  primary: 'border-l-secondary',
+  secondary: 'border-l-tertiary',
+  warn: 'border-l-tertiary',
+  err: 'border-l-error',
 };
 
 export function Panel({ children, className, stripe }: PanelProps) {
   return (
     <div
       className={cn(
-        'rounded-xl bg-bg-raised/90 ghost-border shadow-[0_18px_48px_rgb(0_0_0_/_0.18)] backdrop-blur-sm',
+        'rounded-sm border border-outline-variant/15 bg-surface-container shadow-[0_4px_40px_rgb(0_0_0_/_0.32)]',
         stripe && `border-l-2 ${stripeColors[stripe]}`,
         className,
       )}

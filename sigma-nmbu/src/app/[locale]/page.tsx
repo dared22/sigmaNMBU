@@ -39,7 +39,7 @@ export default async function HomePage({
     <>
       <Hero />
 
-      <section className="mx-auto grid max-w-7xl gap-8 px-6 py-16 lg:grid-cols-12 lg:items-start">
+      <section className="grid w-full gap-8 px-6 py-16 lg:grid-cols-12 lg:items-start lg:gap-12">
         <div className="lg:col-span-8">
           <LiveStreamFeed events={events.slice(0, 3)} news={news.slice(0, 2)} />
         </div>

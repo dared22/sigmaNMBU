@@ -14,21 +14,21 @@ export const Textarea = forwardRef<HTMLTextAreaElement, TextareaProps>(
         {label && (
           <label
             htmlFor={id}
-            className="block font-mono text-[11px] uppercase tracking-[0.24em] text-neutral-muted"
+            className="block font-label text-[11px] uppercase tracking-[0.24em] text-on-surface-variant"
           >
             {label}
           </label>
         )}
         <div className="relative">
-          <span className="absolute left-3 top-3 font-mono text-sm text-accent-primary animate-caret">
+          <span className="absolute left-3 top-3 font-label text-sm text-secondary animate-caret">
             &gt;
           </span>
           <textarea
             ref={ref}
             id={id}
             className={cn(
-              'min-h-[100px] w-full resize-y rounded-[4px] bg-bg-deep px-3 py-2.5 pl-7 font-mono text-sm text-neutral ghost-border',
-              'placeholder:text-neutral-dim focus:outline-none focus:ring-2 focus:ring-accent-primary/70',
+              'min-h-[100px] w-full resize-y rounded-sm border border-outline-variant/60 bg-surface-container-lowest px-3 py-2.5 pl-7 font-label text-sm text-on-surface',
+              'placeholder:text-on-surface-variant focus:outline-none focus:ring-2 focus:ring-secondary/70',
               className,
             )}
             {...props}

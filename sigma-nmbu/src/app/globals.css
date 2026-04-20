@@ -2,30 +2,47 @@
 @plugin "@tailwindcss/typography";
 
 @theme inline {
-  /* ── Colors: Design.md palette ── */
-  --color-bg: #33313B;
-  --color-bg-deep: #2A2833;
-  --color-bg-raised: #3D3A46;
+  /* ── Colors: Stitch palette ── */
+  --color-background: #121414;
+  --color-bg: var(--color-background);
+  --color-surface-container-lowest: #0d0e0f;
+  --color-surface-container-low: #1a1c1c;
+  --color-surface-container: #1e2020;
+  --color-surface-container-high: #292a2a;
+  --color-surface-container-highest: #343535;
+  --color-surface-variant: #343535;
+  --color-surface-tint: #c9c4d1;
+  --color-outline-variant: #48464b;
 
-  --color-accent-primary: #4592AF;
-  --color-accent-primary-dim: #356E86;
-  --color-accent-secondary: #E3C4A8;
-  --color-accent-secondary-dim: #B89A82;
+  --color-secondary: #86d0ef;
+  --color-on-secondary: #003545;
+  --color-primary: #c9c4d1;
+  --color-tertiary: #e0c1a5;
+  --color-on-surface: #e3e2e2;
+  --color-on-surface-variant: #c9c5cb;
+  --color-error: #ffb4ab;
 
-  --color-neutral: #F6F5F5;
-  --color-neutral-muted: #C9C4D1;
-  --color-neutral-dim: #9A95A3;
-
-  --color-line: rgb(255 255 255 / 0.10);
-  --color-line-strong: rgb(255 255 255 / 0.20);
-
-  --color-status-ok: #4592AF;
-  --color-status-warn: #E3C4A8;
-  --color-status-err: #FFB4AB;
+  /* ── Legacy aliases kept for existing classes ── */
+  --color-bg-deep: var(--color-surface-container-lowest);
+  --color-bg-raised: var(--color-surface-container);
+  --color-accent-primary: var(--color-secondary);
+  --color-accent-primary-dim: #64b7da;
+  --color-accent-secondary: var(--color-tertiary);
+  --color-accent-secondary-dim: #b1957b;
+  --color-neutral: var(--color-on-surface);
+  --color-neutral-muted: var(--color-primary);
+  --color-neutral-dim: var(--color-on-surface-variant);
+  --color-line: rgb(72 70 75 / 0.18);
+  --color-line-strong: rgb(72 70 75 / 0.32);
+  --color-status-ok: var(--color-secondary);
+  --color-status-warn: var(--color-tertiary);
+  --color-status-err: var(--color-error);
 
   /* ── Typography ── */
-  --font-headline: var(--font-grotesk), sans-serif;
-  --font-mono: var(--font-mono-var), ui-monospace, monospace;
+  --font-headline: var(--font-space-grotesk), sans-serif;
+  --font-body: var(--font-inter), sans-serif;
+  --font-label: var(--font-jetbrains-mono), ui-monospace, monospace;
+  --font-mono: var(--font-jetbrains-mono), ui-monospace, monospace;
 
   /* ── Letter spacing ── */
   --tracking-headline: -0.05em;
@@ -37,13 +54,14 @@
   --radius-full: 12px;
 
   /* ── Shadows ── */
-  --shadow-glow: 0 0 40px 0 rgb(69 146 175 / 0.08);
-  --shadow-glow-md: 0 0 18px rgb(69 146 175 / 0.35);
-  --shadow-glow-lg: 0 0 32px rgb(69 146 175 / 0.55);
-  --shadow-glow-warm: 0 0 24px rgb(227 196 168 / 0.30);
+  --shadow-glow: 0 0 40px 0 rgb(134 208 239 / 0.05);
+  --shadow-glow-md: 0 0 15px rgb(134 208 239 / 0.30);
+  --shadow-glow-lg: 0 0 25px rgb(134 208 239 / 0.50);
+  --shadow-glow-warm: 0 0 24px rgb(224 193 165 / 0.22);
 
   /* ── Background ── */
-  --background-image-dot-grid: radial-gradient(circle, rgb(255 255 255 / 0.08) 1px, transparent 1px);
+  --background-image-dot-grid: linear-gradient(#343535 1px, transparent 1px),
+    linear-gradient(90deg, #343535 1px, transparent 1px);
   --background-size-grid: 24px 24px;
 
   /* ── Animations ── */
@@ -74,16 +92,23 @@
 /* ── Base ── */
 @layer base {
   html, body {
-    background: var(--color-bg);
-    color: var(--color-neutral);
+    background: #121414;
+    color: var(--color-on-surface);
+  }
+  body {
+    font-family: var(--font-body);
   }
   ::selection {
-    background: var(--color-accent-primary);
-    color: var(--color-bg);
+    background: var(--color-secondary);
+    color: var(--color-on-secondary);
   }
   :focus-visible {
-    outline: 2px solid var(--color-accent-primary);
+    outline: 2px solid var(--color-secondary);
     outline-offset: 2px;
+  }
+  .material-symbols-outlined {
+    font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+    line-height: 1;
   }
 }
 
@@ -94,17 +119,40 @@
 }
 
 @utility glass {
-  background-color: rgb(255 255 255 / 0.04);
+  background-color: rgb(30 32 32 / 0.88);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
 }
 
+@utility hero-gradient {
+  background: linear-gradient(
+    135deg,
+    var(--color-surface-container) 0%,
+    var(--color-surface-container-high) 100%
+  );
+}
+
+@utility glow-shadow {
+  box-shadow: var(--shadow-glow);
+}
+
 @utility ghost-border {
-  border: 1px solid var(--color-line);
+  border: 1px solid var(--color-surface-variant);
 }
 
 @utility hairline {
   border: 1px solid var(--color-line-strong);
+}
+
+@utility hover-matrix {
+  background-image: linear-gradient(rgb(52 53 53 / 0.10) 1px, transparent 1px),
+    linear-gradient(90deg, rgb(52 53 53 / 0.10) 1px, transparent 1px);
+  background-size: 24px 24px;
+}
+
+.hover-matrix:hover {
+  background-image: linear-gradient(rgb(52 53 53 / 0.12) 1px, transparent 1px),
+    linear-gradient(90deg, rgb(52 53 53 / 0.12) 1px, transparent 1px);
 }
 
 /* ── Reduced motion ── */

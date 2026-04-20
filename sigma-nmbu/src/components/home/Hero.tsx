@@ -7,6 +7,7 @@ import { CodeBlock } from '@/components/terminal/CodeBlock';
 import { TerminalCard } from '@/components/terminal/TerminalCard';
 import { TypingText } from '@/components/terminal/TypingText';
 import { ScrollReveal } from '@/components/motion/ScrollReveal';
+import { cn } from '@/lib/cn';
 
 const codeSnippet = `import numpy as np
 import matplotlib.pyplot as plt
@@ -15,7 +16,7 @@ data = np.random.randn(1000)
 bins = np.linspace(-3, 3, 20)
 
 plt.figure(figsize=(8, 4))
-plt.hist(data, bins, color="#4592AF")
+plt.hist(data, bins, color="#86D0EF")
 plt.title("distribution.analysis()")
 plt.show()
 
@@ -28,30 +29,30 @@ export function Hero() {
   const t = useTranslations('home');
 
   return (
-    <section className="relative overflow-hidden px-6 pt-8">
-      <div className="absolute inset-x-0 top-0 h-[28rem] bg-[radial-gradient(circle_at_top_left,rgb(69_146_175_/_0.18),transparent_50%)]" />
-      <div className="relative mx-auto min-h-[614px] max-w-7xl overflow-hidden rounded-[28px] border border-line bg-[linear-gradient(135deg,rgb(255_255_255_/_0.05),rgb(255_255_255_/_0.02))] shadow-glow">
-        <div className="absolute inset-0 bg-[linear-gradient(180deg,rgb(69_146_175_/_0.08),transparent_42%)]" />
-        <div className="relative grid gap-8 px-6 py-16 lg:grid-cols-12 lg:gap-12 lg:px-10 lg:py-20">
+    <section className="relative px-0 pt-8">
+      <div className="mx-auto max-w-[1920px] px-6">
+        <div className="relative min-h-[614px] overflow-hidden rounded-sm hero-gradient ghost-border glow-shadow">
+          <div className="relative grid gap-8 px-6 py-16 lg:grid-cols-12 lg:gap-12 lg:px-10 lg:py-20">
           <div className="flex flex-col justify-center lg:col-span-7">
           <ScrollReveal>
-            <p className="font-mono text-[11px] uppercase tracking-[0.28em] text-accent-primary">
-              {t('status')}
-            </p>
+              <div className="flex items-center gap-3 font-label text-sm font-bold text-tertiary">
+                <span className="h-2 w-2 rounded-none bg-tertiary" />
+                <span>{t('status')}</span>
+              </div>
           </ScrollReveal>
 
           <ScrollReveal delay={0.06}>
-            <h1 className="mt-4 font-headline text-4xl font-bold tracking-headline text-neutral md:text-6xl lg:text-7xl">
+              <h1 className="mt-4 font-headline text-4xl font-bold tracking-tight text-white md:text-6xl lg:text-7xl">
               <TypingText text={t('hero.title')} />
               <br />
-              <span className="text-accent-primary">
+                <span className="text-secondary">
                 {t('hero.titleAccent')}
               </span>
             </h1>
           </ScrollReveal>
 
           <ScrollReveal delay={0.12}>
-            <p className="mt-6 max-w-lg font-mono text-sm leading-relaxed text-neutral/80 md:text-base">
+              <p className="mt-6 max-w-2xl font-body text-lg leading-relaxed text-white/90">
               {t('hero.body')}
             </p>
           </ScrollReveal>
@@ -59,10 +60,17 @@ export function Hero() {
           <ScrollReveal delay={0.18}>
             <div className="mt-8 flex flex-wrap gap-4">
               <Link href="/arrangementer">
-                <Button variant="primary">{t('hero.cta.primary')}</Button>
+                  <Button variant="primary" className="px-8 py-4">
+                    <span className="material-symbols-outlined text-lg">
+                      terminal
+                    </span>
+                    {t('hero.cta.primary')}
+                  </Button>
               </Link>
               <Link href="/om-oss">
-                <Button variant="ghost">{t('hero.cta.secondary')}</Button>
+                  <Button variant="ghost" className="px-8 py-4">
+                    {t('hero.cta.secondary')}
+                  </Button>
               </Link>
             </div>
           </ScrollReveal>
@@ -72,25 +80,25 @@ export function Hero() {
           <ScrollReveal delay={0.24}>
             <TerminalCard
               title="visualize_data.py"
-              className="h-full border-accent-primary/15 bg-black/20 shadow-glow"
+                className="h-full bg-surface-container-lowest shadow-[0_20px_54px_rgb(0_0_0_/_0.22)]"
             >
               <div className="space-y-4">
-                <div className="flex items-center justify-between border-b border-line pb-3 font-mono text-[10px] uppercase tracking-[0.2em] text-neutral-dim">
-                  <span>module.visualization</span>
-                  <span className="text-accent-secondary">render: stable</span>
+                  <div className="flex items-center justify-between border-b border-surface-variant pb-3 font-label text-[10px] uppercase tracking-[0.2em] text-on-surface-variant">
+                    <span className="text-white">module.visualization</span>
+                    <span className="text-tertiary">render: stable</span>
                 </div>
                 <CodeBlock className="border-0 bg-transparent p-0 shadow-none">
                   {codeSnippet.split('\n').map((line, i) => (
                     <span key={i} className="block">
                       {line.includes('import') ? (
                         <>
-                          <span className="text-accent-primary">{line.split(' ')[0]}</span>{' '}
-                          <span className="text-accent-secondary">
+                            <span className="text-secondary">{line.split(' ')[0]}</span>{' '}
+                            <span className="text-tertiary">
                             {line.split(' ').slice(1).join(' ')}
                           </span>
                         </>
                       ) : line.includes('#') ? (
-                        <span className="text-accent-primary">{line}</span>
+                          <span className="text-secondary">{line}</span>
                       ) : (
                         <span>{line}</span>
                       )}
@@ -98,15 +106,18 @@ export function Hero() {
                   ))}
                 </CodeBlock>
                 <div className="grid grid-cols-4 gap-2">
-                  {[78, 62, 51, 39].map((value) => (
-                    <div key={value} className="space-y-2">
-                      <div className="h-24 rounded-full border border-line bg-black/15 p-1">
-                        <div
-                          className="h-full rounded-full bg-[linear-gradient(180deg,rgb(69_146_175_/_0.95),rgb(227_196_168_/_0.45))]"
-                          style={{ clipPath: `inset(${100 - value}% 0 0 0 round 999px)` }}
-                        />
+                    {[78, 62, 51, 39].map((value, index) => (
+                      <div key={value} className="space-y-2">
+                        <div className="flex h-24 items-end border border-surface-variant bg-surface-container p-1">
+                          <div
+                            className={cn(
+                              'w-full rounded-none',
+                              index < 2 ? 'bg-secondary' : 'bg-tertiary',
+                            )}
+                            style={{ height: `${value}%` }}
+                          />
                       </div>
-                      <p className="text-center font-mono text-[10px] uppercase tracking-[0.18em] text-neutral-dim">
+                        <p className="text-center font-label text-[10px] uppercase tracking-[0.18em] text-on-surface-variant">
                         {value}%
                       </p>
                     </div>
@@ -115,6 +126,7 @@ export function Hero() {
               </div>
             </TerminalCard>
           </ScrollReveal>
+        </div>
         </div>
       </div>
       </div>

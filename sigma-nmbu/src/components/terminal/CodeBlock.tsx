@@ -25,11 +25,11 @@ export function CodeBlock({ children, className, ...props }: CodeBlockProps) {
   return (
     <div
       className={cn(
-        'overflow-x-auto rounded-xl bg-black/25 p-4 font-mono text-sm leading-relaxed ghost-border shadow-[inset_0_1px_0_rgb(255_255_255_/_0.03)]',
+        'overflow-x-auto rounded-sm bg-surface-container-lowest p-4 font-label text-sm leading-relaxed ghost-border shadow-[inset_0_1px_0_rgb(255_255_255_/_0.03)]',
         className,
       )}
     >
-      <pre className="whitespace-pre-wrap break-words text-neutral/80" {...props}>
+      <pre className="whitespace-pre-wrap break-words text-on-surface-variant" {...props}>
         {normalizePreChildren(children)}
       </pre>
     </div>

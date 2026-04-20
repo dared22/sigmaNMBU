@@ -15,7 +15,9 @@ export function SiteFrame({ children, messages }: SiteFrameProps) {
       <GridBg />
       <div className="relative z-10 flex min-h-screen flex-col">
         <TopNavBar />
-        <main className="flex-1">{children}</main>
+        <main className="relative mx-auto flex w-full max-w-[1920px] flex-1 flex-col">
+          {children}
+        </main>
         <Footer />
       </div>
     </NextIntlClientProvider>

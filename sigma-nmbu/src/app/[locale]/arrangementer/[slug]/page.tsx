@@ -59,7 +59,7 @@ export default async function EventDetailPage({
   }
 
   return (
-    <div className="mx-auto max-w-7xl space-y-10 px-6 py-8 md:space-y-12 md:py-10">
+    <div className="w-full space-y-10 px-6 py-8 md:space-y-12 md:py-10">
       <section className="space-y-6 border-b border-line pb-8">
         <Link
           href="/arrangementer"

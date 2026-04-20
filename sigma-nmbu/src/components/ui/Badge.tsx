@@ -3,10 +3,10 @@ import { cn } from '@/lib/cn';
 type BadgeVariant = 'default' | 'primary' | 'secondary' | 'status';
 
 const variants: Record<BadgeVariant, string> = {
-  default: 'bg-white/5 text-neutral-muted',
-  primary: 'bg-accent-primary/10 text-accent-primary',
-  secondary: 'bg-accent-secondary/10 text-accent-secondary',
-  status: 'bg-status-ok/10 text-status-ok',
+  default: 'border-outline-variant/20 bg-surface-container-highest text-primary',
+  primary: 'border-secondary/20 bg-secondary/10 text-secondary',
+  secondary: 'border-tertiary/20 bg-tertiary/10 text-tertiary',
+  status: 'border-secondary/20 bg-surface-container-highest text-secondary',
 };
 
 interface BadgeProps {
@@ -19,7 +19,7 @@ export function Badge({ children, variant = 'default', className }: BadgeProps) 
   return (
     <span
       className={cn(
-        'inline-flex items-center rounded-full border border-line px-2.5 py-1 font-mono text-[10px] uppercase tracking-[0.22em]',
+        'inline-flex items-center rounded-sm border px-2.5 py-1 font-label text-[10px] uppercase tracking-[0.22em]',
         variants[variant],
         className,
       )}

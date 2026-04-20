@@ -38,7 +38,7 @@ export default async function AboutPage({
   }
 
   return (
-    <div className="mx-auto max-w-7xl space-y-20 px-6 py-8 md:space-y-24 md:py-10">
+    <div className="w-full space-y-20 px-6 py-8 md:space-y-24 md:py-10">
       <ScrollReveal>
         <div className="space-y-16 md:space-y-20">
           <MDXContent source={page.content} />

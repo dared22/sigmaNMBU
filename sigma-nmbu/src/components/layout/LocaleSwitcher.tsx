@@ -19,7 +19,7 @@ export function LocaleSwitcher() {
   return (
     <button
       onClick={handleSwitch}
-      className="rounded-full border border-line bg-black/15 px-3 py-1.5 font-mono text-[10px] uppercase tracking-[0.24em] text-neutral-muted transition-colors hover:border-line-strong hover:bg-white/5 hover:text-neutral"
+      className="rounded-sm border border-outline-variant/60 bg-surface-container-highest px-3 py-1.5 font-label text-[10px] uppercase tracking-[0.24em] text-on-surface transition-colors hover:text-secondary"
       aria-label={`Switch to ${nextLocale === 'nb' ? 'Norwegian' : 'English'}`}
     >
       {t('locale')}

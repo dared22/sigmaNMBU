@@ -1,7 +1,6 @@
 'use client';
 
 import { useLocale } from 'next-intl';
-import { Badge } from '@/components/ui/Badge';
 import type { NewsItem } from '@/types/content';
 
 interface NewsBlockProps {
@@ -18,12 +17,15 @@ export function NewsBlock({ item }: NewsBlockProps) {
   });
 
   return (
-    <article className="rounded-xl border-l-2 border-l-accent-secondary bg-bg-raised/90 p-4 ghost-border">
-      <div className="mb-2 flex items-center gap-2">
-        <Badge variant="secondary">{item.tag.replace('_', ' ')}</Badge>
-        <span className="font-mono text-[10px] text-neutral-dim">{formatted}</span>
+    <article className="relative overflow-hidden rounded-sm bg-surface-container p-5 ghost-border">
+      <div className="absolute left-0 top-0 h-full w-1 bg-tertiary" />
+      <div className="mb-4 flex flex-wrap items-center justify-between gap-3">
+        <span className="font-label text-xs text-secondary">{formatted}</span>
+        <span className="rounded-sm bg-surface-container-highest px-3 py-1 font-label text-[10px] font-bold uppercase tracking-[0.18em] text-tertiary">
+          {item.tag.replaceAll('_', ' ').toUpperCase()}
+        </span>
       </div>
-      <p className="font-mono text-sm text-neutral/80">
+      <p className="font-body text-sm leading-relaxed text-on-surface-variant">
         {item.excerpt}
       </p>
     </article>

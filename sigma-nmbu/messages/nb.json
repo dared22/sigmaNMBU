@@ -5,6 +5,7 @@
     "about": "Om oss",
     "companies": "For bedrifter",
     "search": "Søk",
+    "account": "Konto",
     "locale": "EN"
   },
   "footer": {
@@ -28,7 +29,8 @@
       }
     },
     "stream": {
-      "heading": "System_Output: Live Stream",
+      "headingPrefix": "System_Output:",
+      "headingAccent": "Live Stream",
       "streaming": "Streaming"
     },
     "portal": {
@@ -37,14 +39,14 @@
       "studentId": "Student_ID",
       "accessKey": "Access_Key",
       "cta": "INITIALIZE_SESSION()",
-      "requestAccess": "Request_Access",
+      "requestAccess": "Request Access Protocol",
       "placeholder": {
         "id": "student@nmbu.no",
         "key": "••••••••"
       },
       "metrics": {
-        "security": "SECURITY: AES-256",
-        "latency": "LATENCY: 12ms"
+        "security": "Connection Security",
+        "latency": "Latency: 12ms"
       },
       "decorativeNotice": "// PORTALEN ER IKKE TILGJENGELIG ENNÅ"
     }

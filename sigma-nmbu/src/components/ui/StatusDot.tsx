@@ -18,7 +18,7 @@ export function StatusDot({ status = 'ok', pulse = true, className }: StatusDotP
   return (
     <span
       className={cn(
-        'inline-block h-2 w-2 rounded-full',
+        'inline-block h-2 w-2 rounded-sm',
         dotColors[status],
         pulse && 'animate-pulse-dot',
         className,

@@ -69,15 +69,15 @@ export default async function EventsPage({
   });
 
   return (
-    <div className="mx-auto max-w-7xl space-y-10 px-6 py-8 md:space-y-12 md:py-10">
+    <div className="w-full space-y-10 px-6 py-8 md:space-y-12 md:py-10">
       <ScrollReveal>
         <section className="space-y-5 border-b border-line pb-6">
           <div className="flex flex-col gap-5 lg:flex-row lg:items-end lg:justify-between">
             <div className="space-y-3">
-              <p className="font-mono text-[11px] uppercase tracking-[0.28em] text-accent-primary">
+              <p className="font-label text-[11px] uppercase tracking-[0.28em] text-tertiary">
                 {t('subtitle')}
               </p>
-              <h1 className="font-headline text-4xl tracking-headline text-neutral md:text-6xl">
+              <h1 className="font-headline text-4xl tracking-tight text-primary md:text-6xl">
                 {t('heading')}
               </h1>
             </div>

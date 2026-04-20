@@ -1,7 +1,6 @@
 'use client';
 
 import { useTranslations } from 'next-intl';
-import { StatusDot } from '@/components/ui/StatusDot';
 import { StreamStagger } from '@/components/motion/StreamStagger';
 import { EventBlock } from './EventBlock';
 import { NewsBlock } from './NewsBlock';
@@ -25,14 +24,22 @@ export function LiveStreamFeed({ events, news }: LiveStreamFeedProps) {
   ].sort((a, b) => b.ts - a.ts);
 
   return (
-    <section className="rounded-[24px] border border-line bg-black/10 p-6 backdrop-blur-sm">
-      <div className="mb-6 flex flex-wrap items-center gap-3">
-        <h2 className="font-headline text-xl font-bold tracking-headline text-neutral md:text-2xl">
-          {t('stream.heading')}
+    <section className="w-full">
+      <div className="mb-6 flex flex-wrap items-center justify-between gap-4 border-b border-surface-variant pb-4">
+        <h2 className="font-headline text-2xl font-bold tracking-tight text-on-surface">
+          {t('stream.headingPrefix')}{' '}
+          <span className="font-label text-lg text-secondary">
+            {t('stream.headingAccent')}
+          </span>
         </h2>
-        <div className="flex items-center gap-1.5">
-          <StatusDot status="err" />
-          <span className="rounded-full bg-status-err/10 px-2.5 py-1 font-mono text-[10px] uppercase tracking-[0.2em] text-status-err">
+        <div className="inline-flex items-center gap-2 rounded-sm bg-surface-container px-3 py-1.5 ghost-border">
+          <span
+            className="material-symbols-outlined animate-pulse text-sm text-error"
+            aria-hidden="true"
+          >
+            radio_button_checked
+          </span>
+          <span className="font-label text-[10px] uppercase tracking-[0.2em] text-on-surface">
             {t('stream.streaming')}
           </span>
         </div>

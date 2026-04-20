@@ -14,8 +14,7 @@ export const Radio = forwardRef<HTMLInputElement, RadioProps>(
       <label
         htmlFor={id}
         className={cn(
-          'group flex cursor-pointer items-start gap-3 rounded-lg border border-transparent',
-          'px-2 py-2 transition-colors hover:border-line hover:bg-white/5',
+          'group flex cursor-pointer items-start gap-3 rounded-sm px-1 py-1.5 transition-colors',
           className,
         )}
       >
@@ -27,15 +26,15 @@ export const Radio = forwardRef<HTMLInputElement, RadioProps>(
             className="peer sr-only"
             {...props}
           />
-          <span className="flex h-4 w-4 items-center justify-center rounded-full border border-line bg-bg-deep transition-colors peer-checked:border-accent-primary peer-checked:bg-accent-primary/10 peer-focus-visible:outline peer-focus-visible:outline-2 peer-focus-visible:outline-offset-2 peer-focus-visible:outline-accent-primary" />
-          <span className="pointer-events-none absolute h-2 w-2 rounded-full bg-accent-primary opacity-0 transition-opacity peer-checked:opacity-100" />
+          <span className="flex h-4 w-4 items-center justify-center rounded-sm border border-transparent bg-surface-container-highest transition-colors peer-checked:bg-secondary/15 peer-focus-visible:outline peer-focus-visible:outline-2 peer-focus-visible:outline-offset-2 peer-focus-visible:outline-secondary" />
+          <span className="pointer-events-none absolute h-2 w-2 rounded-sm bg-secondary opacity-0 transition-opacity peer-checked:opacity-100" />
         </span>
         <span className="space-y-1">
-          <span className="block font-mono text-xs uppercase tracking-[0.2em] text-neutral-muted transition-colors group-hover:text-neutral">
+          <span className="block font-label text-sm text-on-surface transition-colors group-hover:text-secondary">
             {label}
           </span>
           {description ? (
-            <span className="block font-mono text-xs leading-relaxed text-neutral-dim">
+            <span className="block font-label text-xs leading-relaxed text-on-surface-variant">
               {description}
             </span>
           ) : null}

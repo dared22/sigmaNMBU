@@ -1,5 +1,4 @@
 import { Badge } from '@/components/ui/Badge';
-import { Panel } from '@/components/ui/Panel';
 
 export interface EpochEntry {
   id: string;
@@ -22,32 +21,34 @@ export function EpochTimeline({
 }: EpochTimelineProps) {
   return (
     <div className="relative space-y-8">
-      <div className="absolute bottom-0 left-[0.9rem] top-0 w-px bg-[linear-gradient(180deg,rgb(69_146_175_/_0.65),rgb(227_196_168_/_0.15),transparent)]" />
+      <div className="absolute bottom-0 left-[0.65rem] top-2 border-l-2 border-surface-container" />
       {epochs.map((epoch) => (
         <div key={epoch.id} className="relative grid gap-4 pl-10 md:grid-cols-[11rem_1fr] md:items-start">
           <div className="relative">
             <div
-              className={`absolute left-[-2.1rem] top-2 h-3.5 w-3.5 rotate-45 border border-line bg-bg-raised ${
-                epoch.current ? 'animate-pulse-dot bg-accent-primary/85 shadow-glow-md' : 'bg-bg'
+              className={`absolute left-[-2rem] top-1 h-4 w-4 rounded-sm ${
+                epoch.current
+                  ? 'animate-pulse bg-secondary'
+                  : 'border-2 border-secondary bg-surface-container-highest'
               }`}
             />
-            <div className="flex flex-wrap items-center gap-2 font-mono text-[10px] uppercase tracking-[0.24em] text-neutral-dim">
+            <div className="flex flex-wrap items-center gap-2 font-label text-[10px] uppercase tracking-[0.24em] text-on-surface-variant">
               <span>
                 {epochLabel} {epoch.id}
               </span>
-              <span className="text-accent-secondary">{epoch.period}</span>
+              <span className="text-tertiary">{epoch.period}</span>
               {epoch.current ? <Badge variant="primary">{currentLabel}</Badge> : null}
             </div>
           </div>
 
-          <Panel className="px-5 py-5" stripe={epoch.current ? 'primary' : 'secondary'}>
-            <h3 className="font-headline text-2xl tracking-[-0.04em] text-neutral">
+          <div className="rounded-sm border border-outline-variant/10 bg-surface-container-low p-4">
+            <h3 className="font-headline text-2xl tracking-tight text-primary">
               {epoch.title}
             </h3>
-            <p className="mt-3 font-mono text-sm leading-relaxed text-neutral/78 md:text-base">
+            <p className="mt-3 font-body text-sm leading-relaxed text-on-surface-variant md:text-base">
               {epoch.body}
             </p>
-          </Panel>
+          </div>
         </div>
       ))}
     </div>
