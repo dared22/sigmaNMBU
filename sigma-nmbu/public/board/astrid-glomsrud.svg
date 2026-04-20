@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="320" height="384" viewBox="0 0 320 384" fill="none">
+  <rect width="320" height="384" rx="28" fill="#2A2833"/>
+  <rect x="22" y="22" width="276" height="340" rx="22" stroke="#FFFFFF" stroke-opacity=".1"/>
+  <circle cx="160" cy="132" r="56" fill="#E3C4A8" fill-opacity=".26"/>
+  <path d="M102 270c0-35.3 26-64 58-64s58 28.7 58 64v14H102v-14Z" fill="#4592AF" fill-opacity=".3"/>
+  <path d="M80 98h160" stroke="#4592AF" stroke-opacity=".48" stroke-width="2"/>
+  <path d="M80 312h160" stroke="#E3C4A8" stroke-opacity=".24" stroke-width="2"/>
+  <text x="44" y="52" fill="#9A95A3" font-family="JetBrains Mono, monospace" font-size="11" letter-spacing="3">CLASS: SCHEDULER</text>
+  <text x="44" y="340" fill="#F6F5F5" font-family="Space Grotesk, sans-serif" font-size="34" font-weight="700">AG</text>
+</svg>

@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="320" height="384" viewBox="0 0 320 384" fill="none">
+  <rect width="320" height="384" rx="28" fill="#2A2833"/>
+  <rect x="22" y="22" width="276" height="340" rx="22" stroke="#FFFFFF" stroke-opacity=".1"/>
+  <circle cx="160" cy="130" r="56" fill="#4592AF" fill-opacity=".22"/>
+  <path d="M104 268c0-33.7 25.1-61 56-61s56 27.3 56 61v16H104v-16Z" fill="#E3C4A8" fill-opacity=".3"/>
+  <path d="M78 102h164" stroke="#E3C4A8" stroke-opacity=".55" stroke-width="2"/>
+  <path d="M78 314h164" stroke="#4592AF" stroke-opacity=".24" stroke-width="2"/>
+  <text x="44" y="52" fill="#9A95A3" font-family="JetBrains Mono, monospace" font-size="11" letter-spacing="3">CLASS: ALLOCATOR</text>
+  <text x="44" y="340" fill="#F6F5F5" font-family="Space Grotesk, sans-serif" font-size="34" font-weight="700">JE</text>
+</svg>

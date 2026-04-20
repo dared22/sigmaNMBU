@@ -17,7 +17,7 @@ export function Panel({ children, className, stripe }: PanelProps) {
   return (
     <div
       className={cn(
-        'rounded-lg bg-bg-raised ghost-border',
+        'rounded-xl bg-bg-raised/90 ghost-border shadow-[0_18px_48px_rgb(0_0_0_/_0.18)] backdrop-blur-sm',
         stripe && `border-l-2 ${stripeColors[stripe]}`,
         className,
       )}

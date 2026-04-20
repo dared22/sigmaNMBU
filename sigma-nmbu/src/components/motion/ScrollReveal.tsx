@@ -1,7 +1,8 @@
 'use client';
 
-import { motion } from 'framer-motion';
 import { cn } from '@/lib/cn';
+import { useReducedMotion } from 'framer-motion';
+import { useEffect, useState } from 'react';
 
 interface ScrollRevealProps {
   children: React.ReactNode;
@@ -10,15 +11,25 @@ interface ScrollRevealProps {
 }
 
 export function ScrollReveal({ children, className, delay = 0 }: ScrollRevealProps) {
+  const reduceMotion = useReducedMotion();
+  const [isAnimated, setIsAnimated] = useState(false);
+
+  useEffect(() => {
+    if (reduceMotion) return;
+
+    const timeoutId = window.setTimeout(() => {
+      setIsAnimated(true);
+    }, 20);
+
+    return () => window.clearTimeout(timeoutId);
+  }, [reduceMotion]);
+
   return (
-    <motion.div
-      initial={{ opacity: 0, y: 8 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true, margin: '-40px' }}
-      transition={{ duration: 0.42, delay, ease: [0.2, 0.7, 0.2, 1] }}
-      className={cn('', className)}
+    <div
+      style={!reduceMotion && isAnimated ? { animationDelay: `${delay}s` } : undefined}
+      className={cn(!reduceMotion && isAnimated && 'animate-stream-in', className)}
     >
       {children}
-    </motion.div>
+    </div>
   );
 }

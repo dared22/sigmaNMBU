@@ -25,14 +25,14 @@ export function LiveStreamFeed({ events, news }: LiveStreamFeedProps) {
   ].sort((a, b) => b.ts - a.ts);
 
   return (
-    <section>
-      <div className="flex items-center gap-3 mb-6">
-        <h2 className="font-headline text-xl font-bold tracking-headline text-neutral">
+    <section className="rounded-[24px] border border-line bg-black/10 p-6 backdrop-blur-sm">
+      <div className="mb-6 flex flex-wrap items-center gap-3">
+        <h2 className="font-headline text-xl font-bold tracking-headline text-neutral md:text-2xl">
           {t('stream.heading')}
         </h2>
         <div className="flex items-center gap-1.5">
           <StatusDot status="err" />
-          <span className="rounded-lg bg-status-err/10 px-2 py-0.5 font-mono text-[10px] uppercase text-status-err">
+          <span className="rounded-full bg-status-err/10 px-2.5 py-1 font-mono text-[10px] uppercase tracking-[0.2em] text-status-err">
             {t('stream.streaming')}
           </span>
         </div>

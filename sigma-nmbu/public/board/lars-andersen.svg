@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="320" height="384" viewBox="0 0 320 384" fill="none">
+  <rect width="320" height="384" rx="28" fill="#2A2833"/>
+  <rect x="22" y="22" width="276" height="340" rx="22" stroke="#FFFFFF" stroke-opacity=".1"/>
+  <circle cx="160" cy="134" r="56" fill="#4592AF" fill-opacity=".28"/>
+  <path d="M102 266c0-34.2 26.9-62 60-62s60 27.8 60 62v18H102v-18Z" fill="#4592AF" fill-opacity=".34"/>
+  <path d="M84 88h152" stroke="#E3C4A8" stroke-opacity=".55" stroke-width="2"/>
+  <path d="M84 306h152" stroke="#E3C4A8" stroke-opacity=".28" stroke-width="2"/>
+  <text x="44" y="52" fill="#9A95A3" font-family="JetBrains Mono, monospace" font-size="11" letter-spacing="3">CLASS: ROOT</text>
+  <text x="44" y="340" fill="#F6F5F5" font-family="Space Grotesk, sans-serif" font-size="34" font-weight="700">LA</text>
+</svg>

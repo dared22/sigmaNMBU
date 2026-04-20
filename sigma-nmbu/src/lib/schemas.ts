@@ -1,23 +1,27 @@
 import { z } from 'zod/v4';
 
+const isoDateTime = z.string().refine((value) => !Number.isNaN(Date.parse(value)), {
+  message: 'Expected an ISO-compatible datetime string',
+});
+
 export const eventFrontmatter = z.object({
   slug: z.string(),
   type: z.enum(['workshop', 'guest_lecture', 'hackathon', 'social']),
   complexity: z.enum(['o1', 'on', 'on2']),
-  timestamp: z.string(),
+  timestamp: isoDateTime,
   location: z.string(),
   capacity: z.object({ current: z.number(), max: z.number() }),
   input: z.string(),
   output: z.string(),
   speakers: z.array(z.string()).default([]),
-  registerUrl: z.string().default('#'),
+  registerUrl: z.url().default('#'),
   excerpt: z.string(),
   featured: z.boolean().default(false),
 });
 
 export const newsFrontmatter = z.object({
   slug: z.string(),
-  timestamp: z.string(),
+  timestamp: isoDateTime,
   tag: z.enum(['update_log', 'announcement', 'recap']),
   excerpt: z.string(),
 });

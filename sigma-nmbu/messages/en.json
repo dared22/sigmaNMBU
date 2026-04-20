@@ -85,10 +85,10 @@
       "init": "sigma.init()"
     },
     "dict": {
-      "entity": "Sigma — The Data Science Association",
-      "focus": "Data Science, AI, Machine Learning",
-      "objective": "Bridging academia and industry",
-      "values": "['innovation', 'collaboration', 'curiosity', 'inclusion']",
+      "entity": "entity",
+      "focus": "focus_area",
+      "objective": "objective",
+      "values": "core_values",
       "nodes": "active_nodes"
     },
     "log": {

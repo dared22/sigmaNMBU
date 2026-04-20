@@ -23,8 +23,8 @@
       "titleAccent": "Data_Science_Branch",
       "body": "Vi er Sigma — linjeforeningen for datavitenskap ved NMBU. Vi bygger broer mellom teori og praksis gjennom workshops, hackathons og faglige arrangementer.",
       "cta": {
-        "primary": "Start Training",
-        "secondary": "View Documentation"
+        "primary": "Start Training (Bli medlem)",
+        "secondary": "View Documentation (Les mer)"
       }
     },
     "stream": {
@@ -85,10 +85,10 @@
       "init": "sigma.init()"
     },
     "dict": {
-      "entity": "Sigma — Linjeforeningen for Datavitenskap",
-      "focus": "Data Science, AI, Machine Learning",
-      "objective": "Bygge broer mellom akademia og industri",
-      "values": "['innovasjon', 'samarbeid', 'nysgjerrighet', 'inkludering']",
+      "entity": "entity",
+      "focus": "focus_area",
+      "objective": "objective",
+      "values": "core_values",
       "nodes": "active_nodes"
     },
     "log": {

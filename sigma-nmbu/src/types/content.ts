@@ -1,3 +1,5 @@
+export type Locale = 'nb' | 'en';
+export type PageRoute = 'home' | 'om-oss' | 'for-bedrifter';
 export type EventType = 'workshop' | 'guest_lecture' | 'hackathon' | 'social';
 export type Complexity = 'o1' | 'on' | 'on2';
 export type NewsTag = 'update_log' | 'announcement' | 'recap';

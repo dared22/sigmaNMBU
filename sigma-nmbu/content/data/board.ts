@@ -2,9 +2,9 @@ import type { BoardMember } from '@/types/content';
 
 export const board: BoardMember[] = [
   {
-    id: 'member-1',
+    id: 'lars-andersen',
     name: 'Lars Andersen',
-    portrait: '/board/placeholder.svg',
+    portrait: '/board/lars-andersen.svg',
     class: 'root',
     processName: 'sysadmin',
     roleKey: 'leder',
@@ -15,9 +15,9 @@ export const board: BoardMember[] = [
     ],
   },
   {
-    id: 'member-2',
+    id: 'sofie-bakken',
     name: 'Sofie Bakken',
-    portrait: '/board/placeholder.svg',
+    portrait: '/board/sofie-bakken.svg',
     class: 'daemon',
     processName: 'vice_ctrl',
     roleKey: 'nestleder',
@@ -28,9 +28,9 @@ export const board: BoardMember[] = [
     ],
   },
   {
-    id: 'member-3',
+    id: 'jonas-eriksen',
     name: 'Jonas Eriksen',
-    portrait: '/board/placeholder.svg',
+    portrait: '/board/jonas-eriksen.svg',
     class: 'allocator',
     processName: 'budget_mgr',
     roleKey: 'okonomi',
@@ -41,9 +41,9 @@ export const board: BoardMember[] = [
     ],
   },
   {
-    id: 'member-4',
+    id: 'ingrid-dahl',
     name: 'Ingrid Dahl',
-    portrait: '/board/placeholder.svg',
+    portrait: '/board/ingrid-dahl.svg',
     class: 'compiler',
     processName: 'mktg_engine',
     roleKey: 'markeds',
@@ -54,9 +54,9 @@ export const board: BoardMember[] = [
     ],
   },
   {
-    id: 'member-5',
+    id: 'henrik-fjeld',
     name: 'Henrik Fjeld',
-    portrait: '/board/placeholder.svg',
+    portrait: '/board/henrik-fjeld.svg',
     class: 'scheduler',
     processName: 'biz_relay',
     roleKey: 'bedrift',
@@ -67,9 +67,9 @@ export const board: BoardMember[] = [
     ],
   },
   {
-    id: 'member-6',
+    id: 'astrid-glomsrud',
     name: 'Astrid Glomsrud',
-    portrait: '/board/placeholder.svg',
+    portrait: '/board/astrid-glomsrud.svg',
     class: 'scheduler',
     processName: 'event_loop',
     roleKey: 'arrangement',

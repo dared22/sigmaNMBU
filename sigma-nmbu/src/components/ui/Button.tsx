@@ -11,13 +11,13 @@ interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
 
 const variants: Record<ButtonVariant, string> = {
   primary:
-    'bg-accent-primary text-bg font-mono font-bold uppercase tracking-wide shadow-glow hover:shadow-glow-lg transition-all duration-120',
+    'border border-accent-primary/50 bg-accent-primary/95 text-bg shadow-glow transition-all duration-150 hover:-translate-y-px hover:shadow-glow-lg',
   ghost:
-    'ghost-border text-neutral font-mono uppercase tracking-wide hover:bg-white/5 transition-all duration-120',
+    'ghost-border bg-white/[0.02] text-neutral transition-all duration-150 hover:border-line-strong hover:bg-white/7',
   terminal:
-    'bg-bg-deep text-neutral font-mono ghost-border hover:bg-bg-raised transition-all duration-120',
+    'ghost-border bg-black/25 text-neutral transition-all duration-150 hover:bg-bg-raised/80',
   glitch:
-    'bg-accent-primary text-bg font-mono font-bold uppercase tracking-wide data-[state=pressed]:animate-glitch transition-all duration-120',
+    'border border-accent-primary/50 bg-accent-primary/95 text-bg transition-all duration-150 data-[state=pressed]:animate-glitch hover:-translate-y-px hover:shadow-glow-md',
 };
 
 export const Button = forwardRef<HTMLButtonElement, ButtonProps>(
@@ -26,7 +26,7 @@ export const Button = forwardRef<HTMLButtonElement, ButtonProps>(
       <button
         ref={ref}
         className={cn(
-          'inline-flex items-center justify-center gap-2 rounded-lg px-5 py-2.5 text-sm',
+          'inline-flex items-center justify-center gap-2 rounded-[4px] px-5 py-2.5 font-mono text-[11px] font-medium uppercase tracking-[0.24em] disabled:cursor-not-allowed disabled:opacity-45',
           variants[variant],
           className,
         )}

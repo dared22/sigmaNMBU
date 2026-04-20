@@ -1,7 +1,9 @@
 'use client';
 
-import { motion } from 'framer-motion';
+import { useReducedMotion } from 'framer-motion';
+import { cn } from '@/lib/cn';
 import { Children } from 'react';
+import { useEffect, useState } from 'react';
 
 interface StreamStaggerProps {
   children: React.ReactNode;
@@ -10,22 +12,33 @@ interface StreamStaggerProps {
 }
 
 export function StreamStagger({ children, stagger = 0.06, className }: StreamStaggerProps) {
+  const reduceMotion = useReducedMotion();
+  const [isAnimated, setIsAnimated] = useState(false);
+
+  useEffect(() => {
+    if (reduceMotion) return;
+
+    const timeoutId = window.setTimeout(() => {
+      setIsAnimated(true);
+    }, 20);
+
+    return () => window.clearTimeout(timeoutId);
+  }, [reduceMotion]);
+
   return (
     <div className={className}>
       {Children.map(children, (child, i) => (
-        <motion.div
+        <div
           key={i}
-          initial={{ opacity: 0, y: 8 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{
-            duration: 0.42,
-            delay: i * stagger,
-            ease: [0.2, 0.7, 0.2, 1],
-          }}
+          style={
+            !reduceMotion && isAnimated
+              ? { animationDelay: `${i * stagger}s` }
+              : undefined
+          }
+          className={cn(!reduceMotion && isAnimated && 'animate-stream-in')}
         >
           {child}
-        </motion.div>
+        </div>
       ))}
     </div>
   );
