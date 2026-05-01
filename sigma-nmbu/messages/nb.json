@@ -22,7 +22,7 @@
     "hero": {
       "title": "Velkommen til Sigma //",
       "titleAccent": "Data_Science_Branch",
-      "body": "Vi er Sigma — linjeforeningen for datavitenskap ved NMBU. Vi bygger broer mellom teori og praksis gjennom workshops, hackathons og faglige arrangementer.",
+      "body": "Sigma er linjeforeningen for datavitenskapsstudenter ved NMBU, drevet av studenter for studenter. Vi har som mål å bygge bro mellom studielivet og næringslivet, gi støtte og veiledning gjennom studiehverdagen, og arrangere sosiale aktiviteter som samler studentene våre.",
       "cta": {
         "primary": "Start Training (Bli medlem)",
         "secondary": "View Documentation (Les mer)"
@@ -99,7 +99,7 @@
       "current": "CURRENT"
     },
     "board": {
-      "heading": "Hovedstyret",
+      "heading": "Styret",
       "query": "// SELECT * FROM board WHERE status = 'ACTIVE'",
       "stats": {
         "uptime": "UPTIME"
@@ -113,11 +113,12 @@
       },
       "roles": {
         "leder": "Leder",
-        "nestleder": "Nestleder",
+        "nestleder": "Nestleder og økonomiansvarlig",
         "okonomi": "Økonomiansvarlig",
-        "markeds": "Markedsansvarlig",
-        "bedrift": "Bedriftsansvarlig",
-        "arrangement": "Arrangementsansvarlig"
+        "markeds": "Markedsføringsansvarlig",
+        "bedrift": "Næringslivsansvarlig",
+        "arrangement": "Arrangementsansvarlig",
+        "administrasjon": "Administrasjonsansvarlig"
       }
     }
   },

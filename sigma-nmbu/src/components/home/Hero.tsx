@@ -59,14 +59,18 @@ export function Hero() {
 
           <ScrollReveal delay={0.18}>
             <div className="mt-8 flex flex-wrap gap-4">
-              <Link href="/arrangementer">
+              <a
+                href="https://www.nmbu.no/studier/master-5-aar/datavitenskap"
+                target="_blank"
+                rel="noreferrer"
+              >
                   <Button variant="primary" className="px-8 py-4">
                     <span className="material-symbols-outlined text-lg">
                       terminal
                     </span>
                     {t('hero.cta.primary')}
                   </Button>
-              </Link>
+              </a>
               <Link href="/om-oss">
                   <Button variant="ghost" className="px-8 py-4">
                     {t('hero.cta.secondary')}

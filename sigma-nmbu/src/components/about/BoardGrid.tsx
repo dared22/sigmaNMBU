@@ -17,6 +17,7 @@ export function BoardGrid({ members }: BoardGridProps) {
     markeds: t('roles.markeds'),
     bedrift: t('roles.bedrift'),
     arrangement: t('roles.arrangement'),
+    administrasjon: t('roles.administrasjon'),
   };
 
   const classLabels = {

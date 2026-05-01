@@ -42,7 +42,14 @@ export interface BoardMember {
   portrait: string;
   class: BoardClass;
   processName: string;
-  roleKey: 'leder' | 'nestleder' | 'okonomi' | 'markeds' | 'bedrift' | 'arrangement';
+  roleKey:
+    | 'leder'
+    | 'nestleder'
+    | 'okonomi'
+    | 'markeds'
+    | 'bedrift'
+    | 'arrangement'
+    | 'administrasjon';
   order: number;
   metrics: { label: string; value: string }[];
 }

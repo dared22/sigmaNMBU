@@ -113,11 +113,12 @@
       },
       "roles": {
         "leder": "President",
-        "nestleder": "Vice President",
+        "nestleder": "Vice President and Treasurer",
         "okonomi": "Treasurer",
         "markeds": "Marketing Lead",
-        "bedrift": "Corporate Relations",
-        "arrangement": "Events Lead"
+        "bedrift": "Business Relations Lead",
+        "arrangement": "Events Lead",
+        "administrasjon": "Administration Lead"
       }
     }
   },
