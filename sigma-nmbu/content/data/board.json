@@ -1,0 +1,116 @@
+[
+  {
+    "id": "andreas-aabjornrod-pedersen",
+    "name": "Andreas Aabjørnsrød Pedersen",
+    "portrait": "/board/andreas-aabjornrod-pedersen.svg",
+    "class": "root",
+    "processName": "sysadmin",
+    "roleKey": "leder",
+    "order": 1,
+    "metrics": [
+      {
+        "label": "COMMITS",
+        "value": "1,247"
+      },
+      {
+        "label": "UPTIME",
+        "value": "0.5yr"
+      }
+    ]
+  },
+  {
+    "id": "felix-tvete",
+    "name": "Felix Tvete",
+    "portrait": "/board/felix-tvete.svg",
+    "class": "daemon",
+    "processName": "vice_budget",
+    "roleKey": "nestleder",
+    "order": 2,
+    "metrics": [
+      {
+        "label": "COMMITS",
+        "value": "982"
+      },
+      {
+        "label": "UPTIME",
+        "value": "1yr"
+      }
+    ]
+  },
+  {
+    "id": "magnus-borset-sorebo",
+    "name": "Magnus Børset Sørebø",
+    "portrait": "/board/magnus-borset-sorebo.svg",
+    "class": "allocator",
+    "processName": "admin_ops",
+    "roleKey": "administrasjon",
+    "order": 3,
+    "metrics": [
+      {
+        "label": "COMMITS",
+        "value": "654"
+      },
+      {
+        "label": "UPTIME",
+        "value": "1yr"
+      }
+    ]
+  },
+  {
+    "id": "sophia-dubaele-harsaker",
+    "name": "Sophia Dubaele Hårsaker",
+    "portrait": "/board/sophia-dubaele-harsaker.svg",
+    "class": "compiler",
+    "processName": "mktg_engine",
+    "roleKey": "markeds",
+    "order": 4,
+    "metrics": [
+      {
+        "label": "COMMITS",
+        "value": "876"
+      },
+      {
+        "label": "UPTIME",
+        "value": "1yr"
+      }
+    ]
+  },
+  {
+    "id": "torstein-ostigard",
+    "name": "Torstein Østigård",
+    "portrait": "/board/torstein-ostigard.svg",
+    "class": "scheduler",
+    "processName": "biz_relay",
+    "roleKey": "bedrift",
+    "order": 5,
+    "metrics": [
+      {
+        "label": "COMMITS",
+        "value": "543"
+      },
+      {
+        "label": "UPTIME",
+        "value": "0.5yr"
+      }
+    ]
+  },
+  {
+    "id": "oliver-tschudi-madsen",
+    "name": "Oliver Tschudi Madsen",
+    "portrait": "/board/oliver-tschudi-madsen.svg",
+    "class": "scheduler",
+    "processName": "event_loop",
+    "roleKey": "arrangement",
+    "order": 6,
+    "metrics": [
+      {
+        "label": "COMMITS",
+        "value": "721"
+      },
+      {
+        "label": "UPTIME",
+        "value": "1yr"
+      }
+    ]
+  }
+]

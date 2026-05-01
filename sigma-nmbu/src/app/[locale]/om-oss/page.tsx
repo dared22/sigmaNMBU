@@ -3,9 +3,9 @@ import { getTranslations } from 'next-intl/server';
 import { ScrollReveal } from '@/components/motion/ScrollReveal';
 import { BoardGrid } from '@/components/about/BoardGrid';
 import { MDXContent } from '@/components/content/MDXContent';
+import { getBoard } from '@/lib/board';
 import { getPage } from '@/lib/mdx';
 import type { Locale } from '@/types/content';
-import { board } from '../../../../content/data/board';
 import { notFound } from 'next/navigation';
 
 export async function generateMetadata({
@@ -32,6 +32,7 @@ export default async function AboutPage({
   const locale = rawLocale as Locale;
   setRequestLocale(locale);
   const page = getPage('om-oss', locale);
+  const board = getBoard();
 
   if (!page) {
     notFound();

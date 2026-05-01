@@ -2,7 +2,6 @@ import { setRequestLocale } from 'next-intl/server';
 import { getTranslations } from 'next-intl/server';
 import { Hero } from '@/components/home/Hero';
 import { LiveStreamFeed } from '@/components/home/LiveStreamFeed';
-import { AuthTerminal } from '@/components/home/AuthTerminal';
 import { listEvents } from '@/lib/events';
 import { getPage } from '@/lib/mdx';
 import { listNews } from '@/lib/news';
@@ -39,15 +38,8 @@ export default async function HomePage({
     <>
       <Hero />
 
-      <section className="grid w-full gap-8 px-6 py-16 lg:grid-cols-12 lg:items-start lg:gap-12">
-        <div className="lg:col-span-8">
-          <LiveStreamFeed events={events.slice(0, 3)} news={news.slice(0, 2)} />
-        </div>
-        <div className="lg:col-span-4">
-          <div className="sticky top-24">
-            <AuthTerminal />
-          </div>
-        </div>
+      <section className="w-full px-6 py-16">
+        <LiveStreamFeed events={events.slice(0, 3)} news={news.slice(0, 2)} />
       </section>
     </>
   );

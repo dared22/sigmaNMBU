@@ -40,39 +40,20 @@ export function TopNavBar() {
           </Link>
 
           <div className="hidden items-center gap-8 md:flex">
-          {navLinks.map(({ href, key }) => (
-            <Link
-              key={key}
-              href={href}
-              className={cn(
-                'border-b-2 pb-1 font-headline text-sm font-bold uppercase tracking-tight transition-colors',
-                isActive(href)
-                  ? 'border-secondary text-secondary'
-                  : 'border-transparent text-on-surface hover:text-secondary',
-              )}
-            >
-              {t(key)}
-            </Link>
-          ))}
-          </div>
-
-          <div className="flex items-center gap-4">
-            <button
-              type="button"
-              aria-label={t('search')}
-              className="text-on-surface transition-colors hover:text-secondary"
-            >
-              <span className="material-symbols-outlined text-[22px]">search</span>
-            </button>
-            <button
-              type="button"
-              aria-label={t('account')}
-              className="text-on-surface transition-colors hover:text-secondary"
-            >
-              <span className="material-symbols-outlined text-[22px]">
-                account_circle
-              </span>
-            </button>
+            {navLinks.map(({ href, key }) => (
+              <Link
+                key={key}
+                href={href}
+                className={cn(
+                  'border-b-2 pb-1 font-headline text-sm font-bold uppercase tracking-tight transition-colors',
+                  isActive(href)
+                    ? 'border-secondary text-secondary'
+                    : 'border-transparent text-on-surface hover:text-secondary',
+                )}
+              >
+                {t(key)}
+              </Link>
+            ))}
           </div>
         </nav>
       </div>

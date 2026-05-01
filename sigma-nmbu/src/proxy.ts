@@ -7,6 +7,10 @@ const handleI18nRouting = createMiddleware(routing);
 export default function proxy(request: NextRequest) {
   const pathname = request.nextUrl.pathname;
 
+  if (pathname === '/admin' || pathname.startsWith('/admin/')) {
+    return NextResponse.next();
+  }
+
   if (
     pathname === '/' ||
     pathname === '/om-oss' ||
