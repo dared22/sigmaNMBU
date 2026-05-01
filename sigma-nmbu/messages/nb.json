@@ -133,6 +133,67 @@
       "events": "Events/Year",
       "partners": "Corporate_Partners"
     },
+    "packages": {
+      "label": "// PRICING_MATRIX",
+      "heading": "Samarbeidspakker",
+      "body": "Velg en tydelig pakke eller kontakt oss for en løsning som passer kampanjen, rekrutteringsløpet eller arrangementet deres.",
+      "items": {
+        "annonse": {
+          "name": "Annonsepakke",
+          "price": "1 500 kr",
+          "summary": "En målrettet pakke for å dele relevante muligheter med studentene.",
+          "features": {
+            "announcement": "Del en bedriftsannonse eller kunngjøring.",
+            "promotion": "Promoter relevante arrangementer, internships, graduate-stillinger eller jobbutlysninger.",
+            "channels": "Synlighet via linjeforeningens kanaler."
+          }
+        },
+        "sponsor": {
+          "name": "Sponsor",
+          "price": "5 000 kr",
+          "summary": "For bedrifter som ønsker mer synlighet og en tydeligere tilstedeværelse.",
+          "features": {
+            "includes": "Inkluderer annonsepakken.",
+            "visibility": "Sponsorsynlighet gjennom relevante flater.",
+            "logo": "Logoplassering på utvalgt merch eller arrangementsmateriell der det er relevant.",
+            "profile": "Mulighet for bredere profilering mot studenter."
+          }
+        },
+        "bedpress": {
+          "name": "Bedriftspresentasjon",
+          "price": "10 000 kr",
+          "summary": "Direkte møte med studentene for rekruttering, arbeidsgiverprofilering og teknisk innhold.",
+          "features": {
+            "includes": "Inkluderer alt i de lavere pakkene.",
+            "presentation": "Bedriftspresentasjon (bedpress) med faglig eller rekrutteringsrettet innhold.",
+            "access": "Direkte tilgang til studenter.",
+            "mingling": "Mulighet for mat, mingling og uformell prat etter presentasjonen.",
+            "recruiting": "Egnet for rekruttering, arbeidsgiverprofilering og tekniske presentasjoner."
+          }
+        }
+      }
+    },
+    "bedpress": {
+      "label": "// BEDPRESS",
+      "heading": "Bedriftspresentasjon",
+      "body": "Møt studentene direkte og presenter bedrift, teknologi, kultur og karrieremuligheter."
+    },
+    "faglig": {
+      "label": "// TECHNICAL_EVENT",
+      "heading": "Faglig arrangement",
+      "body": "Hold kurs, workshops eller tekniske sesjoner som gir studentene faglig verdi."
+    },
+    "profilering": {
+      "label": "// VISIBILITY",
+      "heading": "Annen profilering",
+      "body": "Promoter arrangementer, jobbannonser, internships og andre relevante muligheter."
+    },
+    "contact": {
+      "label": "// CONTACT_ENDPOINT",
+      "heading": "Kontakt oss",
+      "body": "Ta kontakt om pakker, samarbeid, bedriftspresentasjon, sponsing eller faglige arrangementer.",
+      "email": "datasci@nmbu.no"
+    },
     "endpoints": {
       "sponsorship": {
         "title": "Sponsorship",

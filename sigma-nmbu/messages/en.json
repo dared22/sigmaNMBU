@@ -133,6 +133,67 @@
       "events": "Events/Year",
       "partners": "Corporate_Partners"
     },
+    "packages": {
+      "label": "// PRICING_MATRIX",
+      "heading": "Partnership packages",
+      "body": "Choose a clear package or contact us for a setup that fits your campaign, recruitment track, or event.",
+      "items": {
+        "annonse": {
+          "name": "Announcement Package",
+          "price": "1 500 NOK",
+          "summary": "A targeted package for sharing relevant opportunities with students.",
+          "features": {
+            "announcement": "Share a company announcement or notice.",
+            "promotion": "Promote relevant events, internships, graduate positions, or job postings.",
+            "channels": "Visibility through the student association's channels."
+          }
+        },
+        "sponsor": {
+          "name": "Sponsor",
+          "price": "5 000 NOK",
+          "summary": "For companies that want stronger visibility and a clearer presence.",
+          "features": {
+            "includes": "Includes the announcement package.",
+            "visibility": "Sponsor visibility across relevant surfaces.",
+            "logo": "Logo placement on selected merch or event material where relevant.",
+            "profile": "Opportunity for broader visibility toward students."
+          }
+        },
+        "bedpress": {
+          "name": "Company Presentation",
+          "price": "10 000 NOK",
+          "summary": "Direct access to students for recruitment, employer branding, and technical content.",
+          "features": {
+            "includes": "Includes everything in the lower packages.",
+            "presentation": "Company presentation (bedpress) with technical or recruitment-oriented content.",
+            "access": "Direct access to students.",
+            "mingling": "Opportunity for food, mingling, and informal conversation after the presentation.",
+            "recruiting": "Suitable for recruitment, employer branding, and technical presentations."
+          }
+        }
+      }
+    },
+    "bedpress": {
+      "label": "// BEDPRESS",
+      "heading": "Company presentation",
+      "body": "Meet students directly and present your company, technology, culture, and career opportunities."
+    },
+    "faglig": {
+      "label": "// TECHNICAL_EVENT",
+      "heading": "Technical event",
+      "body": "Host courses, workshops, or technical sessions that give students academic value."
+    },
+    "profilering": {
+      "label": "// VISIBILITY",
+      "heading": "Other visibility",
+      "body": "Promote events, job postings, internships, and other relevant opportunities."
+    },
+    "contact": {
+      "label": "// CONTACT_ENDPOINT",
+      "heading": "Contact us",
+      "body": "Contact us about packages, collaboration, company presentations, sponsorships, or technical events.",
+      "email": "datasci@nmbu.no"
+    },
     "endpoints": {
       "sponsorship": {
         "title": "Sponsorship",

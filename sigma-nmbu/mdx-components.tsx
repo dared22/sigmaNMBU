@@ -1,6 +1,8 @@
 import type { MDXComponents } from 'mdx/types';
 import { CommitLog } from '@/components/about/CommitLog';
 import { VisionDict } from '@/components/about/VisionDict';
+import { CompanyContactCard } from '@/components/companies/CompanyContactCard';
+import { PackageGrid } from '@/components/companies/PackageGrid';
 import { CodeBlock } from '@/components/terminal/CodeBlock';
 import { TerminalCard } from '@/components/terminal/TerminalCard';
 
@@ -61,6 +63,8 @@ const components: MDXComponents = {
   ),
   pre: (props) => <CodeBlock {...props} />,
   CommitLog,
+  CompanyContactCard,
+  PackageGrid,
   TerminalCard,
   VisionDict,
 };
