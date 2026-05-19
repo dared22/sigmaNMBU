@@ -1,4 +1,4 @@
-import { cn } from '@/lib/cn';
+import { cn } from "@/lib/cn";
 
 interface MetaPairProps {
   label: string;
@@ -8,13 +8,11 @@ interface MetaPairProps {
 
 export function MetaPair({ label, value, className }: MetaPairProps) {
   return (
-    <div className={cn('space-y-0.5', className)}>
-      <dt className="font-mono text-[10px] uppercase tracking-widest text-neutral-dim">
+    <div className={cn("space-y-0.5", className)}>
+      <dt className="font-mono text-[10px] uppercase tracking-widest text-on-surface-variant">
         {label}
       </dt>
-      <dd className="font-mono text-sm text-neutral">
-        {value}
-      </dd>
+      <dd className="font-mono text-sm text-on-surface">{value}</dd>
     </div>
   );
 }

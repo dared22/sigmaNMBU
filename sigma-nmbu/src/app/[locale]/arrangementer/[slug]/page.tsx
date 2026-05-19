@@ -1,18 +1,18 @@
-import { setRequestLocale } from 'next-intl/server';
-import { getTranslations } from 'next-intl/server';
-import { notFound } from 'next/navigation';
-import { Badge } from '@/components/ui/Badge';
-import { Link } from '@/i18n/navigation';
-import { MDXContent } from '@/components/content/MDXContent';
-import { EventMetaSidebar } from '@/components/events/EventMetaSidebar';
-import { findEventBySlug, listEventSlugs } from '@/lib/events';
+import { setRequestLocale } from "next-intl/server";
+import { getTranslations } from "next-intl/server";
+import { notFound } from "next/navigation";
+import { Badge } from "@/components/ui/Badge";
+import { Link } from "@/i18n/navigation";
+import { MDXContent } from "@/components/content/MDXContent";
+import { EventMetaSidebar } from "@/components/events/EventMetaSidebar";
+import { findEventBySlug, listEventSlugs } from "@/lib/events";
 import {
   formatEventDate,
   getEventTitle,
   getEventTypeLabel,
-} from '@/lib/event-presenters';
-import { routing } from '@/i18n/routing';
-import type { Locale } from '@/types/content';
+} from "@/lib/event-presenters";
+import { routing } from "@/i18n/routing";
+import type { Locale } from "@/types/content";
 
 export function generateStaticParams() {
   return routing.locales
@@ -32,7 +32,7 @@ export async function generateMetadata({
 
   if (!event) {
     return {
-      title: 'Sigma NMBU — Event',
+      title: "Sigma NMBU — Event",
     };
   }
 
@@ -49,7 +49,7 @@ export default async function EventDetailPage({
 }) {
   const { locale: rawLocale, slug } = await params;
   const locale = rawLocale as Locale;
-  const t = await getTranslations({ locale, namespace: 'events' });
+  const t = await getTranslations({ locale, namespace: "events" });
   setRequestLocale(locale);
 
   const event = findEventBySlug(locale, slug);
@@ -60,36 +60,38 @@ export default async function EventDetailPage({
 
   return (
     <div className="w-full space-y-10 px-6 py-8 md:space-y-12 md:py-10">
-      <section className="space-y-6 border-b border-line pb-8">
+      <section className="space-y-6 border-b border-outline-variant/15 pb-8">
         <Link
           href="/arrangementer"
-          className="inline-flex font-mono text-[11px] uppercase tracking-[0.22em] text-neutral-dim transition-colors hover:text-accent-primary"
+          className="inline-flex font-mono text-[11px] uppercase tracking-[0.22em] text-on-surface-variant transition-colors hover:text-secondary"
         >
-          {t('detail.back')}
+          {t("detail.back")}
         </Link>
 
         <div className="flex flex-wrap items-center gap-3">
-          <Badge variant="primary">{getEventTypeLabel(locale, event.type)}</Badge>
+          <Badge variant="primary">
+            {getEventTypeLabel(locale, event.type)}
+          </Badge>
           <Badge>{t(`item.complexity.${event.complexity}`)}</Badge>
         </div>
 
         <div className="space-y-4">
-          <h1 className="max-w-4xl font-headline text-4xl tracking-headline text-neutral md:text-6xl">
+          <h1 className="max-w-4xl font-headline text-4xl tracking-headline text-on-surface md:text-6xl">
             {getEventTitle(locale, event.slug)}
           </h1>
-          <p className="max-w-3xl font-mono text-sm leading-relaxed text-neutral/78 md:text-base">
+          <p className="max-w-3xl font-mono text-sm leading-relaxed text-on-surface-variant md:text-base">
             {event.excerpt}
           </p>
         </div>
 
-        <div className="grid gap-3 font-mono text-[11px] uppercase tracking-[0.22em] text-neutral-dim sm:grid-cols-3">
+        <div className="grid gap-3 font-mono text-[11px] uppercase tracking-[0.22em] text-on-surface-variant sm:grid-cols-3">
           <span>
             {formatEventDate(locale, event.timestamp, {
-              day: '2-digit',
-              month: 'long',
-              year: 'numeric',
-              hour: '2-digit',
-              minute: '2-digit',
+              day: "2-digit",
+              month: "long",
+              year: "numeric",
+              hour: "2-digit",
+              minute: "2-digit",
             })}
           </span>
           <span>{event.location}</span>

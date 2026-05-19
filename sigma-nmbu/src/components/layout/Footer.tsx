@@ -30,25 +30,20 @@ export function Footer() {
 
         <div className="flex flex-wrap items-center gap-x-5 gap-y-2 md:justify-center">
           <a
-            href="#"
-            aria-disabled="true"
-            className="font-label text-[10px] uppercase tracking-widest text-on-surface transition-all hover:-translate-y-0.5 hover:text-secondary"
-          >
-            {t('slack')}
-          </a>
-          <a
-            href="#"
-            aria-disabled="true"
+            href="https://www.instagram.com/datascinmbu/"
+            target="_blank"
+            rel="noreferrer"
             className="font-label text-[10px] uppercase tracking-widest text-on-surface transition-all hover:-translate-y-0.5 hover:text-secondary"
           >
             {t('instagram')}
           </a>
           <a
-            href="#"
-            aria-disabled="true"
+            href="https://www.facebook.com/groups/305173616957421"
+            target="_blank"
+            rel="noreferrer"
             className="font-label text-[10px] uppercase tracking-widest text-on-surface transition-all hover:-translate-y-0.5 hover:text-secondary"
           >
-            {t('source')}
+            {t('facebook')}
           </a>
         </div>
 

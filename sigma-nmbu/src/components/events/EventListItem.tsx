@@ -1,15 +1,15 @@
-import { useTranslations } from 'next-intl';
-import { Link } from '@/i18n/navigation';
-import { Button } from '@/components/ui/Button';
-import { Badge } from '@/components/ui/Badge';
-import { Panel } from '@/components/ui/Panel';
+import { useTranslations } from "next-intl";
+import { Link } from "@/i18n/navigation";
+import { buttonClassName } from "@/components/ui/Button";
+import { Badge } from "@/components/ui/Badge";
+import { Panel } from "@/components/ui/Panel";
 import {
   formatEventDate,
   getComplexityStripe,
   getEventTitle,
   getEventTypeLabel,
-} from '@/lib/event-presenters';
-import type { Event, Locale } from '@/types/content';
+} from "@/lib/event-presenters";
+import type { Event, Locale } from "@/types/content";
 
 interface EventListItemProps {
   event: Event;
@@ -17,15 +17,17 @@ interface EventListItemProps {
 }
 
 export function EventListItem({ event, locale }: EventListItemProps) {
-  const t = useTranslations('events');
+  const t = useTranslations("events");
   const complexityStripe = getComplexityStripe(event.complexity);
   const metadataBorder =
-    complexityStripe === 'secondary' ? 'border-tertiary' : 'border-secondary';
+    complexityStripe === "secondary" ? "border-tertiary" : "border-secondary";
 
   return (
     <Panel className="overflow-hidden bg-surface-container-low p-0 hover-matrix">
       <article className="flex flex-col gap-6 p-6 md:flex-row md:p-8">
-        <div className={`md:w-48 md:flex-shrink-0 md:border-l-2 md:pl-4 ${metadataBorder}`}>
+        <div
+          className={`md:w-48 md:flex-shrink-0 md:border-l-2 md:pl-4 ${metadataBorder}`}
+        >
           <div className="space-y-4">
             <div>
               <p className="font-label text-xs uppercase text-on-surface-variant">
@@ -33,8 +35,8 @@ export function EventListItem({ event, locale }: EventListItemProps) {
               </p>
               <p className="mt-1 font-label text-sm text-primary">
                 {formatEventDate(locale, event.timestamp, {
-                  day: '2-digit',
-                  month: 'short',
+                  day: "2-digit",
+                  month: "short",
                 })}
               </p>
             </div>
@@ -85,11 +87,13 @@ export function EventListItem({ event, locale }: EventListItemProps) {
           <div className="flex flex-col gap-4 rounded-sm bg-surface-container-lowest p-4 font-mono text-xs text-on-surface-variant lg:flex-row lg:items-center lg:justify-between">
             <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
               <div className="space-y-1">
-                <p className="font-label uppercase">{t('item.location')}</p>
-                <p className="font-label text-sm text-primary">{event.location}</p>
+                <p className="font-label uppercase">{t("item.location")}</p>
+                <p className="font-label text-sm text-primary">
+                  {event.location}
+                </p>
               </div>
               <div className="space-y-1">
-                <p className="font-label uppercase">{t('item.capacity')}</p>
+                <p className="font-label uppercase">{t("item.capacity")}</p>
                 <p className="font-label text-sm text-primary">
                   {event.capacity.current}/{event.capacity.max}
                 </p>
@@ -97,23 +101,22 @@ export function EventListItem({ event, locale }: EventListItemProps) {
               <div className="space-y-1">
                 <p className="font-label uppercase">SPEAKERS</p>
                 <p className="font-label text-sm text-primary">
-                  {event.speakers[0] ?? 'TBA'}
+                  {event.speakers[0] ?? "TBA"}
                 </p>
               </div>
             </div>
 
             <Link
               href={{
-                pathname: '/arrangementer/[slug]',
+                pathname: "/arrangementer/[slug]",
                 params: { slug: event.slug },
               }}
+              className={buttonClassName(
+                "ghost",
+                "px-4 py-1.5 text-primary hover:bg-surface-tint hover:text-background",
+              )}
             >
-              <Button
-                variant="ghost"
-                className="px-4 py-1.5 text-primary hover:bg-surface-tint hover:text-background"
-              >
-                {t('item.registerCta')}
-              </Button>
+              {t("item.registerCta")}
             </Link>
           </div>
         </div>
